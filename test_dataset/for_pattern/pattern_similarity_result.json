@@ -1,0 +1,312 @@
+[
+  {
+    "domain": "air",
+    "file_name": "FARM_ID_CODE_A00259.csv",
+    "statistical_info": [
+      {
+        "filtered_tag_set": {},
+        "filtered_info": {
+          "numberOfColumns": 4,
+          "pointCount": 1440,
+          "frequency": "0 days 00:01:00",
+          "startTime": "2021-10-19T00:00:00+00:00",
+          "endTime": "2021-10-19T23:59:00+00:00",
+          "columns": [
+            "INT_CO2",
+            "INT_REL_HD",
+            "MID_INT_TMP",
+            "SLR_RAD"
+          ]
+        },
+        "similarity": [
+          {
+            "method": "cosine",
+            "result": [
+              {
+                "score": 0.7694,
+                "target": {
+                  "file_name": "serial_number_OC3KL2300002.csv"
+                }
+              },
+              {
+                "score": 0.869,
+                "target": {
+                  "file_name": "serial_number_OC3KL2300005.csv"
+                }
+              },
+              {
+                "score": 0.8294,
+                "target": {
+                  "file_name": "serial_number_OC3KL2300006.csv"
+                }
+              },
+              {
+                "score": 0.8906,
+                "target": {
+                  "file_name": "serial_number_OC3KL2300021.csv"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "domain": "air",
+    "file_name": "serial_number_OC3KL2300002.csv",
+    "statistical_info": [
+      {
+        "filtered_tag_set": {},
+        "filtered_info": {
+          "numberOfColumns": 15,
+          "pointCount": 1440,
+          "frequency": "0 days 00:01:00",
+          "startTime": "2024-11-28T00:00:00+00:00",
+          "endTime": "2024-11-28T23:59:00+00:00",
+          "columns": [
+            "ch4",
+            "co",
+            "co2",
+            "globe_temperature",
+            "gust_wind_direction",
+            "gust_wind_speed",
+            "no2",
+            "o3",
+            "pm10",
+            "pm2.5",
+            "relative_humidity",
+            "so2",
+            "temperature",
+            "wind_direction",
+            "wind_speed"
+          ]
+        },
+        "similarity": [
+          {
+            "method": "cosine",
+            "result": [
+              {
+                "score": 0.7694,
+                "target": {
+                  "file_name": "FARM_ID_CODE_A00259.csv"
+                }
+              },
+              {
+                "score": 0.7916,
+                "target": {
+                  "file_name": "serial_number_OC3KL2300005.csv"
+                }
+              },
+              {
+                "score": 0.7898,
+                "target": {
+                  "file_name": "serial_number_OC3KL2300006.csv"
+                }
+              },
+              {
+                "score": 0.8465,
+                "target": {
+                  "file_name": "serial_number_OC3KL2300021.csv"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "domain": "air",
+    "file_name": "serial_number_OC3KL2300005.csv",
+    "statistical_info": [
+      {
+        "filtered_tag_set": {},
+        "filtered_info": {
+          "numberOfColumns": 15,
+          "pointCount": 1440,
+          "frequency": "0 days 00:01:00",
+          "startTime": "2024-11-28T00:00:00+00:00",
+          "endTime": "2024-11-29T00:00:00+00:00",
+          "columns": [
+            "ch4",
+            "co",
+            "co2",
+            "globe_temperature",
+            "gust_wind_direction",
+            "gust_wind_speed",
+            "no2",
+            "o3",
+            "pm10",
+            "pm2.5",
+            "relative_humidity",
+            "so2",
+            "temperature",
+            "wind_direction",
+            "wind_speed"
+          ]
+        },
+        "similarity": [
+          {
+            "method": "cosine",
+            "result": [
+              {
+                "score": 0.869,
+                "target": {
+                  "file_name": "FARM_ID_CODE_A00259.csv"
+                }
+              },
+              {
+                "score": 0.7916,
+                "target": {
+                  "file_name": "serial_number_OC3KL2300002.csv"
+                }
+              },
+              {
+                "score": 0.7776,
+                "target": {
+                  "file_name": "serial_number_OC3KL2300006.csv"
+                }
+              },
+              {
+                "score": 0.8034,
+                "target": {
+                  "file_name": "serial_number_OC3KL2300021.csv"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "domain": "air",
+    "file_name": "serial_number_OC3KL2300006.csv",
+    "statistical_info": [
+      {
+        "filtered_tag_set": {},
+        "filtered_info": {
+          "numberOfColumns": 15,
+          "pointCount": 1440,
+          "frequency": "0 days 00:01:00",
+          "startTime": "2024-11-28T00:00:00+00:00",
+          "endTime": "2024-11-28T23:59:00+00:00",
+          "columns": [
+            "ch4",
+            "co",
+            "co2",
+            "globe_temperature",
+            "gust_wind_direction",
+            "gust_wind_speed",
+            "no2",
+            "o3",
+            "pm10",
+            "pm2.5",
+            "relative_humidity",
+            "so2",
+            "temperature",
+            "wind_direction",
+            "wind_speed"
+          ]
+        },
+        "similarity": [
+          {
+            "method": "cosine",
+            "result": [
+              {
+                "score": 0.8294,
+                "target": {
+                  "file_name": "FARM_ID_CODE_A00259.csv"
+                }
+              },
+              {
+                "score": 0.7898,
+                "target": {
+                  "file_name": "serial_number_OC3KL2300002.csv"
+                }
+              },
+              {
+                "score": 0.7776,
+                "target": {
+                  "file_name": "serial_number_OC3KL2300005.csv"
+                }
+              },
+              {
+                "score": 0.8722,
+                "target": {
+                  "file_name": "serial_number_OC3KL2300021.csv"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "domain": "air",
+    "file_name": "serial_number_OC3KL2300021.csv",
+    "statistical_info": [
+      {
+        "filtered_tag_set": {},
+        "filtered_info": {
+          "numberOfColumns": 16,
+          "pointCount": 1440,
+          "frequency": "0 days 00:01:00",
+          "startTime": "2024-11-28T00:00:00+00:00",
+          "endTime": "2024-11-29T00:00:00+00:00",
+          "columns": [
+            "ch4",
+            "co",
+            "co2",
+            "globe_temperature",
+            "gust_wind_direction",
+            "gust_wind_direction\\t",
+            "gust_wind_speed",
+            "no2",
+            "o3",
+            "pm10",
+            "pm2.5",
+            "relative_humidity",
+            "so2",
+            "temperature",
+            "wind_direction",
+            "wind_speed"
+          ]
+        },
+        "similarity": [
+          {
+            "method": "cosine",
+            "result": [
+              {
+                "score": 0.8906,
+                "target": {
+                  "file_name": "FARM_ID_CODE_A00259.csv"
+                }
+              },
+              {
+                "score": 0.8465,
+                "target": {
+                  "file_name": "serial_number_OC3KL2300002.csv"
+                }
+              },
+              {
+                "score": 0.8034,
+                "target": {
+                  "file_name": "serial_number_OC3KL2300005.csv"
+                }
+              },
+              {
+                "score": 0.8722,
+                "target": {
+                  "file_name": "serial_number_OC3KL2300006.csv"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

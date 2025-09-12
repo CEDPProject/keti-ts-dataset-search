@@ -1,0 +1,425 @@
+{
+  "bucket_name": "air_outdoor_airStatus_measurement",
+  "domain": "air",
+  "division1": "outdoor",
+  "division2": "airStatus",
+  "division3": "measurement",
+  "subDomain": "outdoor_airStatus",
+  "table_name": "airQualityMeasurement_kw_n",
+  "purpose": "airQualityMeasurement",
+  "acquirer": "kw",
+  "position": "n",
+  "keyword": [
+    "air",
+    "quality",
+    "outdoor"
+  ],
+  "statistical_info": [
+    {
+      "filtered_tag_set": {
+        "serial_number": "OC3KL2300002"
+      },
+      "filtered_info": {
+        "numberOfColumns": 15,
+        "pointCount": 264796,
+        "uniformity": "partially_uniform",
+        "frequency": "0 days 00:01:00",
+        "startTime": "2024-11-28 00:00:00+00:00",
+        "endTime": "2025-06-23 23:59:00+00:00",
+        "columns": [
+          "ch4",
+          "co",
+          "co2",
+          "globe_temperature",
+          "gust_wind_direction",
+          "gust_wind_speed",
+          "no2",
+          "o3",
+          "pm10",
+          "pm2.5",
+          "relative_humidity",
+          "so2",
+          "temperature",
+          "wind_direction",
+          "wind_speed"
+        ]
+      },
+      "location": {
+        "place": "부산시기계공업협동조합 우체국",
+        "lat": 35.067481,
+        "lng": 128.957912,
+        "rd_addr": "부산광역시 사하구 다산로 164-1",
+        "num_addr": "부산 사하구 다대동 1506-13",
+        "description": "고해상도 메탄 센서 설치 지점",
+        "nearby": []
+      }
+    },
+    {
+      "filtered_tag_set": {
+        "serial_number": "OC3KL2300003"
+      },
+      "filtered_info": {
+        "numberOfColumns": 15,
+        "pointCount": 256516,
+        "uniformity": "partially_uniform",
+        "frequency": "0 days 00:01:00",
+        "startTime": "2024-11-28 00:00:00+00:00",
+        "endTime": "2025-06-23 23:59:00+00:00",
+        "columns": [
+          "ch4",
+          "co",
+          "co2",
+          "globe_temperature",
+          "gust_wind_direction",
+          "gust_wind_speed",
+          "no2",
+          "o3",
+          "pm10",
+          "pm2.5",
+          "relative_humidity",
+          "so2",
+          "temperature",
+          "wind_direction",
+          "wind_speed"
+        ]
+      },
+      "location": {
+        "place": "장림2동 행정복지센터",
+        "lat": 35.077915,
+        "lng": 128.97264,
+        "rd_addr": "부산광역시 사하구 장평로 131",
+        "num_addr": "부산 사하구 장림동 601",
+        "description": "저해상도 메탄 센서 설치 지점",
+        "nearby": []
+      }
+    },
+    {
+      "filtered_tag_set": {
+        "serial_number": "OC3KL2300004"
+      },
+      "filtered_info": {
+        "numberOfColumns": 15,
+        "pointCount": 254701,
+        "uniformity": "partially_uniform",
+        "frequency": "0 days 00:01:00",
+        "startTime": "2024-11-28 00:00:00+00:00",
+        "endTime": "2025-06-23 23:59:00+00:00",
+        "columns": [
+          "ch4",
+          "co",
+          "co2",
+          "globe_temperature",
+          "gust_wind_direction",
+          "gust_wind_speed",
+          "no2",
+          "o3",
+          "pm10",
+          "pm2.5",
+          "relative_humidity",
+          "so2",
+          "temperature",
+          "wind_direction",
+          "wind_speed"
+        ]
+      },
+      "location": {
+        "place": "구평동 행정복지센터",
+        "lat": 35.081923,
+        "lng": 128.98707,
+        "rd_addr": "부산광역시 사하구 서포로 40",
+        "num_addr": "부산 사하구 구평동 157-1",
+        "description": "저해상도 메탄 센서 설치 지점",
+        "nearby": []
+      }
+    },
+    {
+      "filtered_tag_set": {
+        "serial_number": "OC3KL2300005"
+      },
+      "filtered_info": {
+        "numberOfColumns": 15,
+        "pointCount": 258812,
+        "uniformity": "partially_uniform",
+        "frequency": "0 days 00:01:00",
+        "startTime": "2024-11-28 00:00:00+00:00",
+        "endTime": "2025-06-23 23:59:00+00:00",
+        "columns": [
+          "ch4",
+          "co",
+          "co2",
+          "globe_temperature",
+          "gust_wind_direction",
+          "gust_wind_speed",
+          "no2",
+          "o3",
+          "pm10",
+          "pm2.5",
+          "relative_humidity",
+          "so2",
+          "temperature",
+          "wind_direction",
+          "wind_speed"
+        ]
+      },
+      "location": {
+        "place": "중현초등학교",
+        "lat": 35.051123,
+        "lng": 128.966521,
+        "rd_addr": "부산광역시 사하구 다대낙조2길 8",
+        "num_addr": "부산 사하구 다대동 1550-4",
+        "description": "저해상도 메탄 센서 설치 지점",
+        "nearby": []
+      }
+    },
+    {
+      "filtered_tag_set": {
+        "serial_number": "OC3KL2300006"
+      },
+      "filtered_info": {
+        "numberOfColumns": 15,
+        "pointCount": 267539,
+        "uniformity": "partially_uniform",
+        "frequency": "0 days 00:01:00",
+        "startTime": "2024-11-28 00:00:00+00:00",
+        "endTime": "2025-06-23 23:59:00+00:00",
+        "columns": [
+          "ch4",
+          "co",
+          "co2",
+          "globe_temperature",
+          "gust_wind_direction",
+          "gust_wind_speed",
+          "no2",
+          "o3",
+          "pm10",
+          "pm2.5",
+          "relative_humidity",
+          "so2",
+          "temperature",
+          "wind_direction",
+          "wind_speed"
+        ]
+      },
+      "location": {
+        "place": "두송중학교",
+        "lat": 35.063596,
+        "lng": 128.982717,
+        "rd_addr": "",
+        "num_addr": "부산 사하구 다대동 25-8",
+        "description": "저해상도 메탄 센서 설치 지점",
+        "nearby": []
+      }
+    },
+    {
+      "filtered_tag_set": {
+        "serial_number": "OC3KL2300009"
+      },
+      "filtered_info": {
+        "numberOfColumns": 15,
+        "pointCount": 261759,
+        "uniformity": "partially_uniform",
+        "frequency": "0 days 00:01:00",
+        "startTime": "2024-11-28 00:00:00+00:00",
+        "endTime": "2025-06-23 23:59:00+00:00",
+        "columns": [
+          "ch4",
+          "co",
+          "co2",
+          "globe_temperature",
+          "gust_wind_direction",
+          "gust_wind_speed",
+          "no2",
+          "o3",
+          "pm10",
+          "pm2.5",
+          "relative_humidity",
+          "so2",
+          "temperature",
+          "wind_direction",
+          "wind_speed"
+        ]
+      },
+      "location": {
+        "place": "행복한교회",
+        "lat": 35.09180767,
+        "lng": 128.9967808,
+        "rd_addr": "부산광역시 사하구 감천로37번길 16",
+        "num_addr": "부산 사하구 감천동 667-1",
+        "description": "저해상도 메탄 센서 설치 지점",
+        "nearby": []
+      }
+    },
+    {
+      "filtered_tag_set": {
+        "serial_number": "OC3KL2300015"
+      },
+      "filtered_info": {
+        "numberOfColumns": 15,
+        "pointCount": 267630,
+        "uniformity": "partially_uniform",
+        "frequency": "0 days 00:01:00",
+        "startTime": "2024-11-28 00:00:00+00:00",
+        "endTime": "2025-06-23 23:59:00+00:00",
+        "columns": [
+          "ch4",
+          "co",
+          "co2",
+          "globe_temperature",
+          "gust_wind_direction",
+          "gust_wind_speed",
+          "no2",
+          "o3",
+          "pm10",
+          "pm2.5",
+          "relative_humidity",
+          "so2",
+          "temperature",
+          "wind_direction",
+          "wind_speed"
+        ]
+      },
+      "location": {
+        "place": "벽산APT",
+        "lat": 35.08379187,
+        "lng": 129.0075609,
+        "rd_addr": "",
+        "num_addr": "부산 사하구 감천동 194-5",
+        "description": "저해상도 메탄 센서 설치 지점",
+        "nearby": []
+      }
+    },
+    {
+      "filtered_tag_set": {
+        "serial_number": "OC3KL2300016"
+      },
+      "filtered_info": {
+        "numberOfColumns": 15,
+        "pointCount": 244107,
+        "uniformity": "partially_uniform",
+        "frequency": "0 days 00:01:00",
+        "startTime": "2024-11-28 00:00:00+00:00",
+        "endTime": "2025-06-23 23:59:00+00:00",
+        "columns": [
+          "ch4",
+          "co",
+          "co2",
+          "globe_temperature",
+          "gust_wind_direction",
+          "gust_wind_speed",
+          "no2",
+          "o3",
+          "pm10",
+          "pm2.5",
+          "relative_humidity",
+          "so2",
+          "temperature",
+          "wind_direction",
+          "wind_speed"
+        ]
+      },
+      "location": {
+        "place": "진주정호",
+        "lat": 35.0622072,
+        "lng": 128.9598291,
+        "rd_addr": "부산광역시 사하구 홍티로 85",
+        "num_addr": "부산 사하구 다대동 1609",
+        "description": "저해상도 메탄 센서 설치 지점",
+        "nearby": []
+      }
+    },
+    {
+      "filtered_tag_set": {
+        "serial_number": "OC3KL2300021"
+      },
+      "filtered_info": {
+        "numberOfColumns": 16,
+        "pointCount": 227854,
+        "uniformity": "partially_uniform",
+        "frequency": "0 days 00:01:00",
+        "startTime": "2024-11-28 00:00:00+00:00",
+        "endTime": "2025-06-23 23:59:00+00:00",
+        "columns": [
+          "ch4",
+          "co",
+          "co2",
+          "globe_temperature",
+          "gust_wind_direction",
+          "gust_wind_direction\\t",
+          "gust_wind_speed",
+          "no2",
+          "o3",
+          "pm10",
+          "pm2.5",
+          "relative_humidity",
+          "so2",
+          "temperature",
+          "wind_direction",
+          "wind_speed"
+        ]
+      },
+      "location": {
+        "place": "태양빌라",
+        "lat": 35.07040324,
+        "lng": 128.989616,
+        "rd_addr": "부산광역시 사하구 두송로 210",
+        "num_addr": "부산 사하구 구평동 435-332",
+        "description": "저해상도 메탄 센서 설치 지점",
+        "nearby": []
+      }
+    },
+    {
+      "filtered_tag_set": {
+        "serial_number": "OC3KL2300022"
+      },
+      "filtered_info": {
+        "numberOfColumns": 15,
+        "pointCount": 227640,
+        "uniformity": "partially_uniform",
+        "frequency": "0 days 00:01:00",
+        "startTime": "2024-11-28 00:00:00+00:00",
+        "endTime": "2025-06-23 23:59:00+00:00",
+        "columns": [
+          "ch4",
+          "co",
+          "co2",
+          "globe_temperature",
+          "gust_wind_direction",
+          "gust_wind_speed",
+          "no2",
+          "o3",
+          "pm10",
+          "pm2.5",
+          "relative_humidity",
+          "so2",
+          "temperature",
+          "wind_direction",
+          "wind_speed"
+        ]
+      },
+      "location": {
+        "place": "다대근린공원",
+        "lat": 35.05725255,
+        "lng": 128.9697018,
+        "rd_addr": "부산광역시 사하구 윤공단로14번길 53",
+        "num_addr": "부산 사하구 다대동 944-22",
+        "description": "저해상도 메탄 센서 설치 지점",
+        "nearby": []
+      }
+    }
+  ],
+  "tag_info": {
+    "serial_number": [
+      "OC3KL2300002",
+      "OC3KL2300003",
+      "OC3KL2300004",
+      "OC3KL2300005",
+      "OC3KL2300006",
+      "OC3KL2300009",
+      "OC3KL2300015",
+      "OC3KL2300016",
+      "OC3KL2300021",
+      "OC3KL2300022"
+    ]
+  },
+  "data_provider": "private"
+}

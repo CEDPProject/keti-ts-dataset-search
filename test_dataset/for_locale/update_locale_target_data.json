@@ -1,0 +1,113 @@
+{
+  "bucket_name": "air_outdoor_airStatus_measurement",
+  "domain": "air",
+  "division1": "outdoor",
+  "division2": "airStatus",
+  "division3": "measurement",
+  "subDomain": "outdoor_airStatus",
+  "table_name": "airQualityMeasurement_kw_n",
+  "purpose": "airQualityMeasurement",
+  "acquirer": "kw",
+  "position": "n",
+  "keyword": [
+    "air",
+    "quality",
+    "outdoor"
+  ],
+  "statistical_info": [
+    {
+      "filtered_tag_set": {
+        "serial_number": "OC3KL2300002"
+      },
+      "filtered_info": {
+        "numberOfColumns": 15,
+        "pointCount": 264796,
+        "uniformity": "partially_uniform",
+        "frequency": "0 days 00:01:00",
+        "startTime": "2024-11-28 00:00:00+00:00",
+        "endTime": "2025-06-23 23:59:00+00:00",
+        "columns": [
+          "ch4",
+          "co",
+          "co2",
+          "globe_temperature",
+          "gust_wind_direction",
+          "gust_wind_speed",
+          "no2",
+          "o3",
+          "pm10",
+          "pm2.5",
+          "relative_humidity",
+          "so2",
+          "temperature",
+          "wind_direction",
+          "wind_speed"
+        ]
+      },
+      "location": {
+        "place": "부산시기계공업협동조합 우체국",
+        "lat": 35.067481,
+        "lng": 128.957912,
+        "rd_addr": "부산광역시 사하구 다산로 164-1",
+        "num_addr": "부산 사하구 다대동 1506-13",
+        "description": "고해상도 메탄 센서 설치 지점",
+        "nearby": [
+          {
+            "distance": 3,
+            "unit": "km",
+            "target": [
+              {
+                "bucket": "air_outdoor_airStatus_measurement",
+                "measurement": "airQualityMeasurement_kw_n",
+                "tags": {
+                  "serial_number": "OC3KL2300003"
+                }
+              },
+              {
+                "bucket": "air_outdoor_airStatus_measurement",
+                "measurement": "airQualityMeasurement_kw_n",
+                "tags": {
+                  "serial_number": "OC3KL2300005"
+                }
+              },
+              {
+                "bucket": "air_outdoor_airStatus_measurement",
+                "measurement": "airQualityMeasurement_kw_n",
+                "tags": {
+                  "serial_number": "OC3KL2300006"
+                }
+              },
+              {
+                "bucket": "air_outdoor_airStatus_measurement",
+                "measurement": "airQualityMeasurement_kw_n",
+                "tags": {
+                  "serial_number": "OC3KL2300016"
+                }
+              },
+              {
+                "bucket": "air_outdoor_airStatus_measurement",
+                "measurement": "airQualityMeasurement_kw_n",
+                "tags": {
+                  "serial_number": "OC3KL2300021"
+                }
+              },
+              {
+                "bucket": "air_outdoor_airStatus_measurement",
+                "measurement": "airQualityMeasurement_kw_n",
+                "tags": {
+                  "serial_number": "OC3KL2300022"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "tag_info": {
+    "serial_number": [
+      "OC3KL2300022"
+    ]
+  },
+  "data_provider": "private"
+}

@@ -1,53 +1,4 @@
-from itertools import product
 from geopy.distance import geodesic
-
-def set_all_entries(db_client):
-    all_entries = []
-
-    for db_name in db_client.get_db_list():
-        for ms_name in db_client.measurement_list(db_name):
-            tag_keys = db_client.get_tag_list(db_name, ms_name)
-            tag_value_map = {} 
-            for tag_key in tag_keys:
-                value_dict = db_client.get_tag_value(db_name, ms_name, tag_key)
-                # value_dict: {"FRM_ID": ["F00013", "F00014"]}
-                if value_dict and tag_key in value_dict:
-                    tag_value_map[tag_key] = value_dict[tag_key]
-            # 각 key별 모든 조합 생성
-            keys = list(tag_value_map.keys())
-            value_lists = list(tag_value_map.values())
-            for values in product(*value_lists):
-                tag_combo = dict(zip(keys, values))
-                all_entries.append({
-                    "bucket": db_name,
-                    "measurement": ms_name,
-                    "tags": tag_combo
-                })
-                
-    return all_entries
-
-def get_search_meta(mongo_client, selected_meta):
-    db_name, other_bk_name = selected_meta['bucket'].split('_', 1)
-    collection_name, division = other_bk_name.rsplit('_', 1)
-
-    # MongoDB 검색 조건
-    search = {
-        'table_name': selected_meta['measurement'],
-        "statistical_info": {
-            "$elemMatch": {
-                **{f"filtered_tag_set.{k}": v for k, v in selected_meta['tags'].items()}
-            }
-        }
-    }
-
-    find_doc = mongo_client.get_document_by_json(db_name, collection_name, search)[0]
-
-    for info in find_doc.get("statistical_info", []):
-        if info.get("filtered_tag_set") == selected_meta["tags"]:
-            find_doc["statistical_info"] = [info]  # <- 해당 info 하나만 리스트로 다시 덮어쓰기
-            
-            return find_doc
-
 
 def search_nearby_by_meta(ref_latlng, target_latlng, n_km):
     """
@@ -65,15 +16,70 @@ def search_nearby_by_meta(ref_latlng, target_latlng, n_km):
     return distance <= n_km
 
 
-def save_nearby_meta(mongo_client, selected_doc, nearby_data):
-    db_name = selected_doc["domain"]
-    collection_name = selected_doc["subDomain"]  # collection 이름으로 추정됨
+def get_nearby_meta(n_km, data_meta, data_meta2 = None):
+    """
+    - data_meta: 기준 문서(dict)
+    - data_meta2: 타겟 문서(dict) 또는 None(내부 비교)
+    - 각 문서의 statistical_info[*].location(lat/lng)로 거리 판단.
+    - 반경 n_km 이내면 기준 info.location.nearby에 아래 형태로 기록:
+        [{"distance": n_km, "unit": "km", "target": [ {"bucket", "measurement", "tags"}, ... ]}]
+    - 결과는 data_meta를 in-place로 갱신하여 반환.
+    """
+    if not isinstance(data_meta, dict):
+        raise TypeError("data_meta는 dict여야 합니다.")
+    if data_meta2 is not None and not isinstance(data_meta2, dict):
+        raise TypeError("data_meta2는 dict 또는 None이어야 합니다.")
 
-    # tags 기준 필터 만들기
-    selected_tags = selected_doc["statistical_info"][0]["filtered_tag_set"]
+    ref_infos = data_meta.get("statistical_info", [])
+    tgt_doc = data_meta if data_meta2 is None else data_meta2
+    tgt_infos= tgt_doc.get("statistical_info", [])
 
-    search = { "table_name": selected_doc["table_name"]}
-    update_data = {"statistical_info.$[elem].location.nearby": nearby_data}
-    array_filters = [{f"elem.filtered_tag_set.{k}": v for k, v in selected_tags.items()}]
-    
-    mongo_client.update_one_document(db_name, collection_name, search, update_data, array_filters)
+    if not isinstance(ref_infos, list) or not isinstance(tgt_infos, list):
+        return data_meta 
+
+    for i, ref_info in enumerate(ref_infos):
+        ref_loc = ref_info.get("location")
+        if not isinstance(ref_loc, dict) or "lat" not in ref_loc or "lng" not in ref_loc:
+            continue
+
+        ref_latlng = (ref_loc["lat"], ref_loc["lng"])
+        nearby_list = []
+        ref_entry = make_entry(data_meta, ref_info)
+
+        for j, tgt_info in enumerate(tgt_infos):
+            if data_meta2 is None and i == j:
+                continue
+
+            tgt_loc = tgt_info.get("location")
+            if not isinstance(tgt_loc, dict) or "lat" not in tgt_loc or "lng" not in tgt_loc:
+                continue
+
+            if ref_entry == make_entry(tgt_doc, tgt_info):
+                continue
+
+            if _same_coords(ref_loc, tgt_loc, decimals=6):
+                continue
+
+            tgt_latlng = (tgt_loc["lat"], tgt_loc["lng"])
+            if search_nearby_by_meta(ref_latlng, tgt_latlng, n_km):
+                nearby_list.append(make_entry(tgt_doc, tgt_info))
+
+        ref_info.setdefault("location", {})
+        ref_info["location"]["nearby"] = [{ "distance": n_km, "unit": "km","target": nearby_list}]
+
+    return data_meta
+
+def make_entry(doc, info):
+    """
+    doc에서 bucket/measurement 키 이름 차이를 흡수하고,
+    info의 filtered_tag_set을 담아 표준 엔트리로 반환.
+    """
+    bucket = doc.get("bucket_name") or doc.get("bucket") or ""
+    measurement = doc.get("table_name") or doc.get("measurement") or ""
+    tags = info.get("filtered_tag_set") or {}
+    return {"bucket": bucket, "measurement": measurement, "tags": dict(tags)}
+
+def _same_coords(loc_a, loc_b, decimals=6):
+    return ( round(loc_a.get("lat", 0), decimals) == round(loc_b.get("lat", 0), decimals) and
+            round(loc_a.get("lng", 0), decimals) == round(loc_b.get("lng", 0), decimals) )
+
