@@ -148,7 +148,8 @@ def set_data_preprocessing(data, param):
     
     freq_data = make_static_frequency_data(data, param['frequency'])
     remove_data = remove_duplication(freq_data)
-    clean_data = check_all_nan_col(remove_data)
+    impute_data = simple_impute(remove_data, param['impute_param'])
+    clean_data = check_all_nan_col(impute_data)
     scaled_data = data_scaling(clean_data, param['scaling_param'])
     
     return scaled_data
@@ -198,14 +199,11 @@ def get_data_similarity(data_list, param):
             tgt_freq = get_freq(tgt_df_raw)
 
             common_freq = _choose_freq(param.get("frequency"), ref_freq, tgt_freq)
-            preprocessing_param = {"frequency": common_freq, "scaling_param": scaling_param}
+            preprocessing_param = {"frequency": common_freq, "scaling_param": scaling_param, 'impute_param':impute_param}
 
             data1 = set_data_preprocessing(ref_df_raw, preprocessing_param)
             data2 = set_data_preprocessing(tgt_df_raw, preprocessing_param)
 
-            if impute_param.get("flag", False):
-                data1 = simple_impute(data1, impute_param)
-                data2 = simple_impute(data2, impute_param)
 
             if data1.empty or data2.empty:
                 score = float("nan")

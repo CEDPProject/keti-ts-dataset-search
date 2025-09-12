@@ -23,25 +23,25 @@
             "method": "cosine",
             "result": [
               {
-                "score": 0.7694,
+                "score": 0.7381,
                 "target": {
                   "file_name": "serial_number_OC3KL2300002.csv"
                 }
               },
               {
-                "score": 0.869,
+                "score": 0.6831,
                 "target": {
                   "file_name": "serial_number_OC3KL2300005.csv"
                 }
               },
               {
-                "score": 0.8294,
+                "score": 0.9345,
                 "target": {
                   "file_name": "serial_number_OC3KL2300006.csv"
                 }
               },
               {
-                "score": 0.8906,
+                "score": 0.8681,
                 "target": {
                   "file_name": "serial_number_OC3KL2300021.csv"
                 }
@@ -87,25 +87,25 @@
             "method": "cosine",
             "result": [
               {
-                "score": 0.7694,
+                "score": 0.7381,
                 "target": {
                   "file_name": "FARM_ID_CODE_A00259.csv"
                 }
               },
               {
-                "score": 0.7916,
+                "score": 0.7499,
                 "target": {
                   "file_name": "serial_number_OC3KL2300005.csv"
                 }
               },
               {
-                "score": 0.7898,
+                "score": 0.7227,
                 "target": {
                   "file_name": "serial_number_OC3KL2300006.csv"
                 }
               },
               {
-                "score": 0.8465,
+                "score": 0.8911,
                 "target": {
                   "file_name": "serial_number_OC3KL2300021.csv"
                 }
@@ -151,25 +151,25 @@
             "method": "cosine",
             "result": [
               {
-                "score": 0.869,
+                "score": 0.6831,
                 "target": {
                   "file_name": "FARM_ID_CODE_A00259.csv"
                 }
               },
               {
-                "score": 0.7916,
+                "score": 0.7499,
                 "target": {
                   "file_name": "serial_number_OC3KL2300002.csv"
                 }
               },
               {
-                "score": 0.7776,
+                "score": 0.6346,
                 "target": {
                   "file_name": "serial_number_OC3KL2300006.csv"
                 }
               },
               {
-                "score": 0.8034,
+                "score": 0.8314,
                 "target": {
                   "file_name": "serial_number_OC3KL2300021.csv"
                 }
@@ -215,25 +215,25 @@
             "method": "cosine",
             "result": [
               {
-                "score": 0.8294,
+                "score": 0.9345,
                 "target": {
                   "file_name": "FARM_ID_CODE_A00259.csv"
                 }
               },
               {
-                "score": 0.7898,
+                "score": 0.7227,
                 "target": {
                   "file_name": "serial_number_OC3KL2300002.csv"
                 }
               },
               {
-                "score": 0.7776,
+                "score": 0.6346,
                 "target": {
                   "file_name": "serial_number_OC3KL2300005.csv"
                 }
               },
               {
-                "score": 0.8722,
+                "score": 0.6915,
                 "target": {
                   "file_name": "serial_number_OC3KL2300021.csv"
                 }
@@ -280,25 +280,25 @@
             "method": "cosine",
             "result": [
               {
-                "score": 0.8906,
+                "score": 0.8681,
                 "target": {
                   "file_name": "FARM_ID_CODE_A00259.csv"
                 }
               },
               {
-                "score": 0.8465,
+                "score": 0.8911,
                 "target": {
                   "file_name": "serial_number_OC3KL2300002.csv"
                 }
               },
               {
-                "score": 0.8034,
+                "score": 0.8314,
                 "target": {
                   "file_name": "serial_number_OC3KL2300005.csv"
                 }
               },
               {
-                "score": 0.8722,
+                "score": 0.6915,
                 "target": {
                   "file_name": "serial_number_OC3KL2300006.csv"
                 }
